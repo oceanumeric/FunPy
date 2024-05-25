@@ -36,7 +36,7 @@
         }
 
         .code {
-          font-size: 14px;
+          font-size: 13px;
         }
 
         p > .highlighter-rouge {
@@ -66,6 +66,21 @@
         }
         .u-email {
           color: #000;
+        }
+
+        .article .copy-button {
+          position: absolute;
+          opacity: 0;
+          margin-left: 46%;
+          margin-top: 1px;
+        }
+        
+        .highlight:hover > .copy-button {
+          opacity: 1;
+        }
+        
+        .highlight > .copy-button:active {
+          opacity: 1;
         }
       </style>
 </head>
