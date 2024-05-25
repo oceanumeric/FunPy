@@ -9,14 +9,27 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/MathJax.js?config=TeX-
 
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
+    extensions: [
+    "tex2jax.js",
+    "MathMenu.js",
+    "MathZoom.js",
+    "AssistiveMML.js",
+    "a11y/accessibility-menu.js"
+    ],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
     tex2jax: {
       inlineMath: [ ['$','$'], ["\\(","\\)"] ],
       displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
       processEscapes: true
     },
-    "HTML-CSS": { availableFonts: ["TeX"] }
+    jax: ["input/TeX", "output/CommonHTML"]
   });
 </script> 
 
