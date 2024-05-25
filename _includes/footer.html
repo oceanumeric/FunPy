@@ -67,21 +67,6 @@
         .u-email {
           color: #000;
         }
-
-        .article .copy-button {
-          position: absolute !important;
-          opacity: 0 !important;
-          margin-left: 46% !important;
-          margin-top: 1px !important;
-        }
-        
-        .highlight:hover > .copy-button {
-          opacity: 1 !important;
-        }
-        
-        .highlight > .copy-button:active {
-          opacity: 1 !important;
-        }
       </style>
 
     
@@ -109,6 +94,23 @@
           });
         });
       </script>
+
+      <style>
+        article > .copy-button {
+          position: absolute !important;
+          opacity: 0 !important;
+          margin-left: 46% !important;
+          margin-top: 1px !important;
+        }
+        
+        .highlight:hover > .copy-button {
+          opacity: 1 !important;
+        }
+        
+        .highlight > .copy-button:active {
+          opacity: 1 !important;
+        }
+      </style>
 </head>
 <footer class="site-footer h-card">
     <data class="u-url" href="{{ "/" | relative_url }}"></data>
