@@ -1,4 +1,4 @@
 apple banana cherry date
-elephant fox
 grape apple orange pear
+elephant fox
 kiwi lemon mango nectarine
