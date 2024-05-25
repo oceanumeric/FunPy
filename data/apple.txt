@@ -1,0 +1,4 @@
+apple banana cherry date
+elephant fox
+grape apple orange pear
+kiwi lemon mango nectarine
