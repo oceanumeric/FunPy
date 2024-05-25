@@ -37,7 +37,7 @@ def series(n: int, row_iter: Iterator[list[SrcT]]) -> Iterator[tuple[SrcT, SrcT]
 if __name__ == "__main__":
     logger.info("--- Chapter 3: Iterators and Generators ---")
     logger.info("--- Example 3-1: Reading a CSV file with a fixed format ---")
-    source_path = Path("data/Anscombe.txt")
+    source_path = Path("../data/Anscombe.txt")
 
     logger.info("Read the file and covert it to a list of lists")
     with source_path.open() as source:
