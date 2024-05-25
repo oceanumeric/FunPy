@@ -1,0 +1,34 @@
+### your site title here
+title: Functional Python Programming
+author:
+  name: Michael 王云斐
+  email: numerical.ocean@gmail.com
+  website: https://oceanumeric.github.io
+  youtube: https://www.youtube.com/@innolab2698
+  github: https://github.com/oceanumeric/FunPy
+
+
+# The `>` after `description:` means to ignore line-breaks until next key.
+# If you want to omit the line-break after the end of text, use `>-` instead.
+description: >
+  Learning functional programming in Python can enhance big data analysis and NLP 
+  tasks by enabling clearer, more concise code. Functional programming's focus 
+  on immutability and higher-order functions streamlines complex data 
+  transformations and facilitates parallel processing, crucial for handling 
+  vast datasets and intricate linguistic structures efficiently.
+
+
+### let's use the minima theme (see https://github.com/jekyll/minima)
+theme: minima
+
+
+
+# math engine with katex in case you want to do complex configuration
+# kramdown:
+#   math_engine: katex
+
+
+### exclude the instructions / write-up in the README.md
+
+exclude:
+- README.md
