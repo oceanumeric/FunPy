@@ -71,48 +71,46 @@
 
     
       <script type="text/javascript">
-        // CSS styles
-        var style = document.createElement('style');
-        style.innerHTML = `
-            article > .copy-button {
-                position: absolute !important;
-                opacity: 0 !important;
-                margin-left: 46% !important;
-                margin-top: 1px !important;
-            }
-            .highlight:hover > .copy-button {
-                opacity: 1 !important;
-            }
-            .highlight > .copy-button:active {
-                opacity: 1 !important;
-            }
-        `;
-        document.head.appendChild(style);
-
-        // JavaScript code
         var codeBlocks = document.querySelectorAll('div.highlight');
-
+      
         codeBlocks.forEach(function (codeBlock) {
-            var copyButton = document.createElement('button');
-            copyButton.className = 'copy-button';
-            copyButton.type = 'button';
-            copyButton.ariaLabel = 'Copy code to clipboard';
-            copyButton.innerText = "Copy";
-
-            codeBlock.prepend(copyButton);
-            copyButton.addEventListener('click', function () {
-                var code = codeBlock.querySelector('code').innerText.trim();
-                window.navigator.clipboard.writeText(code);
-
-                copyButton.innerText = 'Copied';
-                var fourSeconds = 1000;
-
-                setTimeout(function () {
-                    copyButton.innerText = 'Copy';
-                }, fourSeconds);
-            });
+          var copyButton = document.createElement('button');
+          copyButton.className = 'copy-button';
+          copyButton.type = 'button';
+          copyButton.ariaLabel = 'Copy code to clipboard';
+          copyButton.innerText = "copy";
+      
+          codeBlock.prepend(copyButton);
+          copyButton.addEventListener('click', function () {
+            var code = codeBlock.querySelector('code').innerText.trim();
+            window.navigator.clipboard.writeText(code);
+      
+            copyButton.innerText = 'Copied';
+            var fourSeconds = 1000;
+      
+            setTimeout(function () {
+              copyButton.innerText = 'Copy';
+            }, fourSeconds);
+          });
         });
-    </script>
+      </script>
+
+      <style>
+        .copy-button {
+          position: absolute;
+          opacity: 0;
+          margin-left: 46%;
+          margin-top: 1px;
+        }
+        
+        .highlight:hover > .copy-button {
+          opacity: 1;
+        }
+        
+        .highlight > .copy-button:active {
+          opacity: 1;
+        }
+      </style>
 </head>
 <footer class="site-footer h-card">
     <data class="u-url" href="{{ "/" | relative_url }}"></data>
